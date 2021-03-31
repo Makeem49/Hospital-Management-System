@@ -12,23 +12,63 @@
     <!-- Custom CSS -->
     <link
       rel="stylesheet"
+      href="{{ url_for('static', filename='styles/css_reset.css') }}">
+      
+    <link
+      rel="stylesheet"
       href="{{ url_for('static', filename='styles/main.css') }}">
+
+    <!-- Font link -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap" rel="stylesheet">
 
 
 </head>
 <body>
+
+
+    <div class="nav-header">
+        <div class="nav-contact">
+
+        </div>
+    </div>
+
+    <header>
+        <div class="navbar">
+
+        </div>
+    </header>
+
+    <main>
+        <div class="main-content">
+
+        </div>
+    </main>
+    
+    <div class="card-container">
+        <div class="card">
+
+        </div>
+        <div class="card">
+
+        </div>
+        <div class="card">
+
+        </div>
+    </div>
+
+    <div class="welcome-container">
+
+    </div>
+    
+    <div class="department-container">
+
+    </div>
+   
+
     
 
-    <!-- Nav bar -->
-    {% block contact %} 
-        
-            
-    {% endblock %}
-    
-    {% block heading %}
 
-
-        
-    {% endblock %}
 </body>
 </html>

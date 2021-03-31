@@ -1,0 +1,76 @@
+* {
+    font-family: 'Crimson Pro', serif;
+}
+
+.nav-header {
+    height: 50px;
+    width: 100vw;
+    background-color: #e1e8ee;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.nav-contact {
+    width: 1200px;
+    height: 40px;
+    margin: 0px auto;
+    background-color: #e1e8ee;
+    margin: auto;
+}
+
+header {
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    background-color: white;
+}
+
+main {
+    width: 100vw;
+    min-height: 500px;
+    background-color: rgba(59, 59, 148, 0.637);
+    display: flex;
+    position: relative;
+}
+
+.main-content {
+    width: 1200px;
+    height: auto;
+    background-color: chocolate;
+    margin: 0px auto;
+}
+
+.card-container {
+    width: 1200px;
+    min-height: 300px;
+    background-color: lightskyblue;
+    display: flex;
+    margin: 0px auto;
+    justify-content: space-between;
+    position: relative;
+}
+
+.card {
+    margin-top: 5px;
+    width: 33.333%;
+    min-height: 300px;
+    background-color: rgb(112, 160, 122);
+}
+
+.welcome-container {
+    margin-top: 5px;
+    min-height: 700px;
+    width: 1200px;
+    margin: 0px auto;
+    background-color: rgb(31, 138, 156);
+    padding-top: 2px;
+}
+
+.department-container {
+    margin-top: 5px;
+    min-height: 800px;
+    width: 1200px;
+    margin: 0px auto;
+    background-color: yellowgreen;
+}
