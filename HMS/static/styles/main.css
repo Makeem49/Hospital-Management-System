@@ -23,28 +23,29 @@ header {
     width: 100vw;
     height: 100px;
     display: flex;
-    background-color: white;
+    background-color: rgba(75, 12, 12, 0.863);
 }
 
-main {
+.main {
     width: 100vw;
-    min-height: 500px;
-    background-color: rgba(59, 59, 148, 0.637);
-    display: flex;
-    position: relative;
+    min-height: 800px;
+    background-image: url(' {{url_for('static', filename='/images/main.jpg')}}');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
 }
 
 .main-content {
     width: 1200px;
-    height: auto;
-    background-color: chocolate;
+    min-height: 500px;
+    background-color: rgb(112, 160, 122);
     margin: 0px auto;
 }
 
 .card-container {
     width: 1200px;
     min-height: 300px;
-    background-color: lightskyblue;
+    /* background-color: lightskyblue; */
     display: flex;
     margin: 0px auto;
     justify-content: space-between;
@@ -52,25 +53,74 @@ main {
 }
 
 .card {
-    margin-top: 5px;
     width: 33.333%;
-    min-height: 300px;
+    min-height: 450px;
     background-color: rgb(112, 160, 122);
+    margin-top: 5px;
 }
 
 .welcome-container {
-    margin-top: 5px;
     min-height: 700px;
     width: 1200px;
     margin: 0px auto;
     background-color: rgb(31, 138, 156);
     padding-top: 2px;
+    margin-top: 5px;
 }
 
 .department-container {
-    margin-top: 5px;
     min-height: 800px;
     width: 1200px;
     margin: 0px auto;
     background-color: yellowgreen;
+    margin-top: 5px;
+}
+
+.feedback {
+    width: 100vw;
+    height: 600px;
+    background-color: rgb(46, 127, 173);
+    margin-top: 5px;
+}
+
+.service {
+    width: 1200px;
+    height: 550px;
+    margin: 0px auto;
+    background-color: rgb(49, 173, 122);
+}
+
+.doctor {
+    width: 1200px;
+    height:600px;
+    margin: 0px auto;
+    background-color:rgb(70, 70, 35);
+}
+
+.contact-container {
+    width: 100vw;
+    height: 300px;
+    position: relative;
+    margin-top: 3px;
+    background-color: turquoise;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.emargency-app {
+    width: 50%;
+    height: 300px;
+    background:linear-gradient(to right, white, blue);
+}
+
+.footer {
+    width: 100vw;
+    min-height:500px;
+    background-color: rgba(200, 191, 191, 0.938);
+}
+
+.copyright {
+    width: 100vw;
+    height: 80px;
+    background-color: black;
 }
