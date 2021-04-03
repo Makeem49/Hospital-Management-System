@@ -1,35 +1,114 @@
 * {
     font-family: 'Crimson Pro', serif;
+    cursor: pointer;
 }
 
 .nav-header {
+    position: relative;
     height: 50px;
     width: 100vw;
     background-color: #e1e8ee;
+}
+
+.contact-bar {
+    position: relative;
+    width: 1200px;
+    height: 50px;
     display: flex;
     justify-content: space-between;
-    text-align: center;
+    color: gray;
+    margin: 0px auto;
+}
+
+.nav-media {
+    color: lightsteelblue;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    flex-grow: 1;
 }
 
 .nav-contact {
-    width: 1200px;
-    height: 40px;
-    margin: 0px auto;
-    background-color: #e1e8ee;
-    margin: auto;
+    color: lightsteelblue;
+    padding-top: 13px;
+    padding-bottom: 5px;
+    font-size: 17px;
 }
 
 header {
     width: 100vw;
     height: 100px;
-    display: flex;
-    background-color: rgba(75, 12, 12, 0.863);
+    background-color: #FFFFFF;
 }
+
+.navbar {
+    position: relative;
+    width: 1200px;
+    height: 100px;
+    margin: 0px auto;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+    height: 60px;
+    font-size: 30px;
+    font-weight:bolder;
+    padding-top: 17px;
+    color: lightslategrey;
+    
+}
+
+
+.nav-menu {
+    width: 700px;
+    height: 60px;
+    margin-left: 30px;
+    flex-grow: 1.5px;
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;  
+    color: rgb(255, 255, 255);  
+    font-size: medium;
+}
+
+
+#links-page a {
+    text-decoration: none;
+    color: #919191;
+    font-size: 20px;
+}
+
+.appointment {
+    border: 1px solid grey;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    background-color:#5DB2FF;
+    font-size: 18px;
+}
+
+.appointment a {
+    text-decoration: none;
+    color: white;
+}
+
+.appointment:hover {
+    background-color: white;
+    transition-duration: 0.1s;
+    color: blue;
+}
+
+
+
 
 .main {
     width: 100vw;
     min-height: 800px;
-    background-image: url(' {{url_for('static', filename='/images/main.jpg')}}');
+    background-image:url('/static/images/main.jpg') ;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;    
