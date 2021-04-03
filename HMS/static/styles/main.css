@@ -75,7 +75,6 @@ header {
     font-size: medium;
 }
 
-
 #links-page a {
     text-decoration: none;
     color: #919191;
@@ -89,36 +88,72 @@ header {
     border-radius: 10px;
     background-color:#5DB2FF;
     font-size: 18px;
-}
-
-.appointment a {
     text-decoration: none;
-    color: white;
 }
 
 .appointment:hover {
     background-color: white;
     transition-duration: 0.1s;
-    color: blue;
 }
 
 
-
-
 .main {
+    position: relative;
     width: 100vw;
     min-height: 800px;
-    background-image:url('/static/images/main.jpg') ;
+    background-image:url('/static/images/main2.jpg') ;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;    
+    background-size: cover;   
 }
 
 .main-content {
     width: 1200px;
-    min-height: 500px;
-    background-color: rgb(112, 160, 122);
     margin: 0px auto;
+    padding-top: 250px;
+    color: black;
+}
+
+.main-content h1 {
+    font-size: 60px;
+    font-family: 'Roboto Mono', "monospace";
+}
+
+.main-content h2 {
+    font-weight: 200;
+    font-size: 60px;
+    font-family: 'Roboto Mono', 'Monospace';
+    padding-top: 15px;
+}
+
+.main-content h3 {
+    position: relative;
+    font-size: 15px;
+    font-family: 'Roboto Mono', 'Monospace';
+    padding-top: 15px;
+    width: 900px;
+    padding-top: 30px;
+    color: gray;
+}
+
+.service-main {
+    border: 2px solid gray;
+    color: white;
+    width: 250px;
+    height: 60px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    background: #5DB2FF;
+    font-size: 20px;
+}
+
+.service-main:hover {
+    background-color: white;
+    transition-duration: 0.1s;
 }
 
 .card-container {
