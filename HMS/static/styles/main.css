@@ -1,6 +1,7 @@
 * {
     font-family: 'Crimson Pro', serif;
     cursor: pointer;
+    font-size: 16em;
 }
 
 .nav-header {
@@ -140,15 +141,15 @@ header {
     border: 2px solid gray;
     color: white;
     width: 250px;
-    height: 60px;
+    height: 70px;
     margin-top: 80px;
     display: flex;
-    justify-content: center;
-    padding-top: 20px;
+    justify-content: space-around;
+    padding-top: 20px ;
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 5px;
     background: #5DB2FF;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .service-main:hover {
@@ -157,36 +158,127 @@ header {
 }
 
 .card-container {
-    width: 1200px;
-    min-height: 300px;
-    /* background-color: lightskyblue; */
-    display: flex;
-    margin: 0px auto;
-    justify-content: space-between;
     position: relative;
+    width: 100vw;
+    min-height: 300px;
+    background-color: #83C4FF;
+    margin: 0px auto;
 }
 
 .card {
-    width: 33.333%;
-    min-height: 450px;
-    background-color: rgb(112, 160, 122);
-    margin-top: 5px;
+    width: 1200px;
+    min-height: 400px;
+    margin: 0px auto;
+    display: flex;
+    flex-flow: row ;
+}
+
+
+.card1 i {
+    font-size: 80px;
+    padding-top: 60px;
+    color: white;
+}
+
+.card1 h3 {
+    padding-top: 20px;
+    color: white;
+    font-size: 30px;
+}
+
+.card1 p {
+    font-size: 20px;
+    color: white;
+    padding-top: 25px;
+    line-height: 30px;
+}
+
+.card-button {
+    border: 2px solid gray;
+    color: white;
+    width: 200px;
+    height: 45px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    text-decoration: none;
+    border-radius: 12px;
+    background: #5DB2FF;
+    font-size: 20px;
+}
+
+.card-button:hover {
+    background-color: white;
+    transition-delay: 0.2s;
 }
 
 .welcome-container {
+    position: relative;
     min-height: 700px;
     width: 1200px;
     margin: 0px auto;
-    background-color: rgb(31, 138, 156);
-    padding-top: 2px;
-    margin-top: 5px;
+    background-color:white;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 150px;
+}
+
+.container-content {
+    position: relative;
+    background-color: white;
+    height: 700px;
+    width: 1200px;
+    /* margin: 0px auto; */
+    padding-left: 100px;
+}
+
+.container-content h2 {
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.container-content h1 {
+    font-size: 50px;
+    padding-top: 60px;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+.container-content p {
+    color: gray;
+    font-size: 22px;
+    line-height: 35px;
+    padding-top: 35px;
+}
+
+.img1 {
+    position: absolute;
+    width: 350px;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+    background-image: url(/static/images/container2.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
+.img2 {
+    position: absolute;
+    width: 350px;
+    height: 450px;
+    left: 280px;
+    top: 150px;
+    background-image: url(/static/images/container1.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
 }
 
 .department-container {
     min-height: 800px;
     width: 1200px;
     margin: 0px auto;
-    background-color: yellowgreen;
+    background-color: rgb(16, 142, 173);
     margin-top: 5px;
 }
 
