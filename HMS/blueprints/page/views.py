@@ -6,3 +6,7 @@ from hms.blueprints.page import page
 def home():
     return render_template('page/home.html')
 
+
+@page.route('/contact')
+def contact():
+    pass
