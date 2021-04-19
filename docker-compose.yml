@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+    website:
+        build: .
+        command: > 
+            gunicorn -b 0.0.0.0:7000 --access-logfile - --reload "hms:create_app()"
+        environment: 
+            PYTHONUNBUFFERED: 'true'
+        volumes:
+            - '.:/snakeeyes'
+        ports:
+            - '7000:7000'
