@@ -11,4 +11,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD gunicorn -b 0.0.0.0:7000 --access-logfile - --reload "hms.app:create_app()"
+CMD gunicorn -b 0.0.0.0:7000 --access-logfile - "hms.app:create_app()"
