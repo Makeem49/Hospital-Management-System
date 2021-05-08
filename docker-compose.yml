@@ -6,6 +6,7 @@ services:
     command: >
       gunicorn -b 0.0.0.0:7000
         --access-logfile -
+        --reload
         "hms.app:create_app()"
     environment:
       PYTHONUNBUFFERED: 'true'
