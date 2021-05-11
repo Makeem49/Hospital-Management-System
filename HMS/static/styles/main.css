@@ -304,16 +304,7 @@ header {
     min-height: 800px;
     width: 1200px;
     margin: 0px auto;
-    background-color: rgb(16, 142, 173);
     margin-top: 5px;
-}
-
-.all-department {
-    position: relative;
-    display: flex;
-    align-content: space-between;
-    flex-flow: wrap;
-    margin-top: 30px;
 }
 
 .department-row h1 {
@@ -323,23 +314,101 @@ header {
     position: relative;
 }
 
+.all-department {
+    position: relative;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 30px;
+}
+
 .department-row h4 {
     text-align: center;
     padding-top: 20px;
 }
 
-.single-department {
-    position: relative;
-    width: 30%;
+.single-department-0 {
+    width: 32%;
     height: 400px;
-    background-color: rgb(59, 9, 9);
+    background-color:white;
 }
+
+.single-department-1 {
+    width: 32%;
+    height: 400px;
+    background-color: white;
+}
+
+.single-department-2 {
+    width: 32%;
+    height: 400px;
+    background-color: white;
+}
+
+.single-department-3 {
+    width: 32%;
+    height: 400px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.single-department-4 {
+    width: 32%;
+    height: 400px;
+    background-color: white1;
+    margin-top: 20px;
+}
+
+.single-department-5 {
+    width: 32%;
+    height: 400px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.department_thumb {
+    height: 200px;
+    background-color: blue;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.department-content h4 {
+    font-size: 25px;
+    font-family: sans-serif;
+    color: black;
+}
+
+.department-content p {
+    font-size: 20px;
+    color: gray;
+    line-height: 25px;
+    padding-top: 27px;
+}
+
+#department-more {
+    color: rgb(39, 81, 199);
+    width: 150px;
+    height: 45px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 20px;
+}
+
 
 .feedback {
     width: 100vw;
     height: 600px;
-    background-color: rgb(46, 127, 173);
+    background-image: url(/static/images/d9.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     margin-top: 5px;
+    margin-top: 50px;
 }
 
 .service {
