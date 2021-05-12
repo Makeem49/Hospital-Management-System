@@ -299,6 +299,12 @@ header {
     color: white;
 }
 
+.outer-department {
+    width: 100vw;
+    background-color: #F5FBFF;
+
+}
+
 .department-row {
     position: relative;
     min-height: 800px;
@@ -332,18 +338,21 @@ header {
     width: 32%;
     height: 400px;
     background-color:white;
+    box-sizing: border-box;
 }
 
 .single-department-1 {
     width: 32%;
     height: 400px;
     background-color: white;
+    box-sizing: border-box;
 }
 
 .single-department-2 {
     width: 32%;
     height: 400px;
     background-color: white;
+    box-sizing: border-box;
 }
 
 .single-department-3 {
@@ -351,13 +360,15 @@ header {
     height: 400px;
     background-color: white;
     margin-top: 20px;
+    box-sizing: border-box;
 }
 
 .single-department-4 {
     width: 32%;
     height: 400px;
-    background-color: white1;
+    background-color: white;
     margin-top: 20px;
+    box-sizing: border-box;
 }
 
 .single-department-5 {
@@ -365,12 +376,19 @@ header {
     height: 400px;
     background-color: white;
     margin-top: 20px;
+    box-sizing: border-box;
 }
 
 .department_thumb {
     height: 200px;
     background-color: blue;
     border-radius: 20px 20px 0px 0px;
+}
+
+.department_thumb img {
+    max-width: 200%;
+    max-height: 100%;
+    display: block;
 }
 
 .department-content h4 {
@@ -382,7 +400,7 @@ header {
 .department-content p {
     font-size: 20px;
     color: gray;
-    line-height: 25px;
+    line-height: 15px;
     padding-top: 27px;
 }
 
@@ -407,22 +425,60 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    margin-top: 5px;
-    margin-top: 50px;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(241, 231, 231);
+}
+
+.feedback p {
+    margin: 0px 400px;
+}
+
+#comment {
+    margin-top: 100px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.feedback div i {
+    margin-top: 100px;
+    margin-bottom: 60px;
+    font-size: 30px;
 }
 
 .service {
+    position: relative;
     width: 1200px;
     height: 550px;
     margin: 0px auto;
-    background-color: rgb(49, 173, 122);
+    background-color: tomato;
+}
+
+.service-row {
+    position: relative;
+    margin-top: 20px auto;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.service-link a {
+    position: relative;
+    text-decoration: none;
+    color: thistle;
+    margin-top: 10px;
 }
 
 .doctor {
+    position: relative;
     width: 1200px;
-    height:600px;
-    margin: 0px auto;
+    min-height:600px;
+    margin: 20px auto;
     background-color:rgb(70, 70, 35);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
 }
 
 .contact-container {
@@ -442,13 +498,56 @@ header {
 }
 
 .footer {
+    position: relative;
     width: 100vw;
     min-height:500px;
     background-color: rgba(200, 191, 191, 0.938);
+    display: flex;
+    justify-content: space-between;
 }
+
+.footer-card1 {
+    width: 40%;
+    min-height: 50px;
+    background-color: hotpink;
+    margin: 0px 5px 0px 0px ;
+    padding: 120px 0px 0px 100px;
+    line-height: 10px;
+}
+
+.footer-card1 p {
+    position: relative;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.footer-card2 {
+    width: 25%;
+    min-height: 50px;
+    background-color: rgb(105, 255, 235);
+}
+
+.footer-card3 {
+    width: 25%;
+    min-height: 50px;
+    background-color: rgb(119, 116, 117);
+}
+
+.footer-card4 {
+    width: 25%;
+    min-height: 50px;
+    background-color: rgb(43, 36, 39)
+}
+
+
 
 .copyright {
     width: 100vw;
     height: 80px;
     background-color: black;
+    display: flex;
+    justify-content: center;
+    color: grey;
+    font-size: 20px;
+    padding-top: 30px;
 }
