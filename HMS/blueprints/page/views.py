@@ -9,4 +9,8 @@ def home():
 
 @page.route('/contact')
 def contact():
-    pass
+    return render_template('page/contact.html')
+
+@page.route('/blog')
+def blog():
+    return render_template('page/blog.html')
