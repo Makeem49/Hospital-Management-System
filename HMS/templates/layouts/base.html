@@ -50,15 +50,15 @@
     </div>
     
     <div class="card-container">
-        {% block card-container %}{% endblock %}
+        {% block card_container %}{% endblock %}
     </div>
 
     <div class="welcome-container">
-      {% block welcome-container %}{% endblock %}
+      {% block welcome_container %}{% endblock %}
     </div>
     
     <div class="outer-department">
-        {% block outer-department %}{% endblock %}
+        {% block outer_department %}{% endblock %}
     </div>
     
 
@@ -100,9 +100,11 @@
         {% block footer %}{% endblock %}
     </div>
    
-    <div class="copyright">
-        <p>Develop by TechHouse Media Club. </p>
-    </div>
+    {% block copyright %}
+        <div class="copyright">
+            <p>Develop by TechHouse Media Club. <span><i class="far fa-registered"></i></span> </p>
+        </div>
+    {% endblock %}
 
 
 </body>
