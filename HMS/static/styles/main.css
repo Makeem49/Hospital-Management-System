@@ -500,8 +500,7 @@ header {
 .footer {
     position: relative;
     width: 100vw;
-    min-height:500px;
-    background-color: rgba(200, 191, 191, 0.938);
+    min-height:400px;
     display: flex;
     justify-content: space-between;
 }
@@ -509,10 +508,18 @@ header {
 .footer-card1 {
     width: 40%;
     min-height: 50px;
-    background-color: hotpink;
-    margin: 0px 5px 0px 0px ;
-    padding: 120px 0px 0px 100px;
+    background-color: #1F1F1F;
+    padding: 80px 0px 0px 180px;
     line-height: 10px;
+    color: grey;
+    padding-right: 20px;
+}
+
+.social_account {
+    display: inline-block;
+    margin-top: 40px;
+    margin-right: 20px;
+    font-size: 40px;
 }
 
 .footer-card1 p {
@@ -524,19 +531,58 @@ header {
 .footer-card2 {
     width: 25%;
     min-height: 50px;
-    background-color: rgb(105, 255, 235);
+    background-color: #1F1F1F;
+    padding: 80px 0px 0px 0px;
+    line-height: 40px;
+    color: grey;
+    font-size: 20px;
 }
+
+.footer-card2 h1 {
+    position: relative;
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: white;
+}
+
 
 .footer-card3 {
     width: 25%;
     min-height: 50px;
-    background-color: rgb(119, 116, 117);
+    background-color: #1F1F1F;
+    padding: 80px 0px 0px 0px;
+    line-height: 40px;
+    color: grey;
+    font-size: 20px;
+}
+
+.footer-card3 h1 {
+    position: relative;
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footer-card3 div a {
+    text-decoration: none;
+    color: grey;
 }
 
 .footer-card4 {
     width: 25%;
     min-height: 50px;
-    background-color: rgb(43, 36, 39)
+    background-color: #1F1F1F;
+    padding: 80px 0px 0px 0px;
+    line-height: 40px;
+    color: grey;
+    font-size: 20px;
+}
+
+.footer-card4 h1 {
+    position: relative;
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: white;
 }
 
 
@@ -551,3 +597,41 @@ header {
     font-size: 20px;
     padding-top: 30px;
 }
+
+
+.department_services {
+    position: relative;
+    width: 100vw;
+    min-height: 800px;
+    background-image: url('/static/images/services.jpg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: end;
+    padding-right:100px;
+    padding-top: 100px;
+    color: cadetblue;
+    font-size: 40px;
+}
+
+#bold {
+    font-size: 130px;
+    margin-bottom: 10px;
+}
+
+.expert {
+    position: relative;
+    width: 100vw;
+    min-height: 800px;
+    background-image: url('/static/images/doctor.jpg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: start;
+    padding-left:100px;
+    padding-top: 100px;
+    color: cadetblue;
+    font-size: 40px;
+}
+
+
