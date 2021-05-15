@@ -7,10 +7,23 @@ def home():
     return render_template('page/home.html')
 
 
-@page.route('/contact')
-def contact():
-    return render_template('page/contact.html')
+@page.route('/doctor')
+def doctor():
+    return render_template('page/doctors.html')
+
+@page.route('/department')
+def department():
+    return render_template('page/department.html')
 
 @page.route('/blog')
-def blog():
-    return render_template('page/blog.html')
+def about():
+    return render_template('page/about.html')
+
+
+@page.route('/faq')
+def questions():
+    pass
+
+
+
+
