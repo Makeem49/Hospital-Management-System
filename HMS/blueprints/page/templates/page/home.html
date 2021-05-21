@@ -1,59 +1,4 @@
-{% extends "layouts/base.html" %}
-
-
-{% block nav %}
-    <div class="contact-bar">
-        <div class="nav-media">
-            <i class="fab fa-facebook-f" style="padding: 10px 10px 10px 0px ;"></i>
-            <i class="fab fa-linkedin" style="padding: 10px;"></i>
-            <i class="fab fa-google-plus-g" style="padding: 10px;"></i>
-        </div>
-
-        <div class="nav-contact">
-            <div><i class="fas fa-phone-alt"></i>+1245688937</div>
-        </div>
-
-        <div class="nav-contact">
-            <div><i class="fas fa-envelope" style="padding: 0px 20px;"></i><span class="margin-right:20px">info@Drpoo.com</span></div>
-        </div>
-    </div>
-{% endblock %}
-    
-
-
-
-{% block header %}
-    <div class="navbar">
-        <div class="logo">
-            Dr. POO
-        </div>
-        <div class="nav-menu">
-            <div id="links-page">
-                <a href="{{url_for('page.home')}}">Home</a>
-            </div>
-            <div id="links-page">
-                <a href="{{url_for('page.department')}}">Department</a>
-            </div>
-            <div id="links-page">
-                <a href="#">Blog</a>
-            </div>
-            <div id="links-page">
-                <a href="#">Pages</a>
-            </div>
-            <div id="links-page">
-                <a href="{{url_for('page.doctor')}}">Doctors</a>
-            </div>
-            <div id="links-page">
-                <a href="#">Contact</a>
-            </div>
-        </div>
-        
-        
-        <a href="#" class="appointment">Make an appointment</a>
-    </div>
-{% endblock %}
-
-
+{% extends "layouts/app.html" %}
 
 {% block main %}
     <div class="main-content">
@@ -233,21 +178,6 @@
     <p id="comment">Asana Korim</p>
 {% endblock %}
 
-<!-- 
-    <div class="service">
-        <div class="service-row">
-            <div class="service-link">
-                <a href="#">Excellent Service</a>
-            </div>
-            <div class="service-link">
-                <a href="#">Excellent Service</a>
-            </div>
-            <div class="service-link">
-                <a href="#">Excellent Service</a>
-            </div>
-        </div>
-    </div> -->
-
 
 {% block doctor %}
     <div class="outer-department">
@@ -335,67 +265,5 @@
                 </div>  
             </div>
         </div>
-    </div>
-{% endblock %}
-
-    <!-- <div class="contact-container">
-        <div class="emargency-app">
-
-        </div>
-        <div class="emargency-app">
-            
-        </div>
-        
-    </div> -->
-
-{% block footer %}   
-    <div class="footer-card1">
-        <div class="logo">
-            Dr. POO
-        </div>
-
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, doloribus?</p>
-
-        <div class="social_account">
-            <i class="fab fa-facebook-square"></i>
-        </div>
-
-        <div class="social_account">
-            <i class="fab fa-twitter-square"></i>
-        </div>
-
-        <div class="social_account">
-            <i class="fab fa-instagram-square"></i>
-        </div>
-
-
-    </div>
-
-    <div class="footer-card2">
-        <h1>Department</h1>
-
-        <h4>Eye Care</h4>
-        <h4>Skin Care</h4>
-        <h4>Pathology</h4>
-        <h4>Dental</h4>
-        <h4>Medicine</h4>
-
-    </div>
-
-    <div class="footer-card3">
-        <h1>Useful links</h1>
-
-        <div><a href="#">About</a></div>
-        <div><a href="#">Blog</a></div>
-        <div><a href="#">Contact</a></div>
-        <div><a href="#">Appointment</a></div>
-    </div>
-
-    <div class="footer-card4">
-        <h1>Address</h1>
-
-        <p>200, D-block, Green lane USA</p>
-        <p>+10 367 467 8934</p>
-        <p>docmed@contact.com</p>
     </div>
 {% endblock %}
