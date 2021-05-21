@@ -36,7 +36,6 @@
 
     <div class="nav-header">
         {% block nav %}{% endblock %}
-    
     </div>
 
 
@@ -44,57 +43,60 @@
         {% block header %}{% endblock %}
     </header>
 
+    <!-- Categorizing all page content inside a container to allow reuseability -->
+    {% block container %}
 
-    <div class="main">
-        {% block main %}{% endblock %}
-    </div>
-    
-    <div class="card-container">
-        {% block card_container %}{% endblock %}
-    </div>
-
-    <div class="welcome-container">
-      {% block welcome_container %}{% endblock %}
-    </div>
-    
-    <div class="outer-department">
-        {% block outer_department %}{% endblock %}
-    </div>
-    
-
-
-    <div class="feedback">
-        {% block feedback %}{% endblock %}
-
-    </div>
-<!-- 
-    <div class="service">
-        <div class="service-row">
-            <div class="service-link">
-                <a href="#">Excellent Service</a>
-            </div>
-            <div class="service-link">
-                <a href="#">Excellent Service</a>
-            </div>
-            <div class="service-link">
-                <a href="#">Excellent Service</a>
-            </div>
-        </div>
-    </div> -->
-
-    <div class="doctor">
-        {% block doctor %}{% endblock %}
-    </div>
-
-    <!-- <div class="contact-container">
-        <div class="emargency-app">
-
-        </div>
-        <div class="emargency-app">
-            
+        <div class="main">
+            {% block main %}{% endblock %}
         </div>
         
-    </div> -->
+        <div class="card-container">
+            {% block card_container %}{% endblock %}
+        </div>
+
+        <div class="welcome-container">
+        {% block welcome_container %}{% endblock %}
+        </div>
+        
+        <div class="outer-department">
+            {% block outer_department %}{% endblock %}
+        </div>
+        
+
+
+        <div class="feedback">
+            {% block feedback %}{% endblock %}
+
+        </div>
+    <!-- 
+        <div class="service">
+            <div class="service-row">
+                <div class="service-link">
+                    <a href="#">Excellent Service</a>
+                </div>
+                <div class="service-link">
+                    <a href="#">Excellent Service</a>
+                </div>
+                <div class="service-link">
+                    <a href="#">Excellent Service</a>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="doctor">
+            {% block doctor %}{% endblock %}
+        </div>
+
+        <!-- <div class="contact-container">
+            <div class="emargency-app">
+
+            </div>
+            <div class="emargency-app">
+                
+            </div>
+            
+        </div> -->
+    {% endblock %}
 
     <div class="footer">    
         {% block footer %}{% endblock %}
