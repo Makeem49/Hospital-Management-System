@@ -1,5 +1,7 @@
 {% extends 'layouts/app.html' %}
 
+
+
 {% block container %}
     <div class="contact_container">
         <div class="contact_img">
@@ -16,5 +18,10 @@
 
     <div class="contact_form">
         <h1>Get in touch</h1>
+        <form action="url_for('contact.contcat')">
+
+            {{ form.csrf_token }}
+
+        </form>
     </div>
 {% endblock %}
