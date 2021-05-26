@@ -14,3 +14,24 @@ services:
       - '.:/hms'
     ports:
       - '7000:7000'
+  
+
+  redis:
+    image: 'redis:3.0-alpine'
+    command: redis-server --requirepass Olayinka1?
+    volumes:
+      - 'redis:/var/lib/redis/data'
+    ports:
+      - '6379:6379'
+
+
+  celery:
+    build: .
+    command: celery worker -l info -A hms.blueprints.contact.tasks
+    env_file:
+      - '.env'
+    volumes:
+      - '.:/hms'
+
+volumes:
+  redis:
