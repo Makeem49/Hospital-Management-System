@@ -1,9 +1,13 @@
+{% import 'macros/flash.html' as flash with context%}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf" content="{{csrf_token()}}">
+
     <title>{% block title %}Home page{% endblock %}</title>
 
     <!-- Bootsrap link -->
@@ -30,9 +34,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,500;1,400&display=swap" rel="stylesheet">
 
 
+
+
 </head>
 <body>
-
+    
+    {{ flash.render_flash() }}
 
     <div class="nav-header">
         {% block nav %}{% endblock %}
