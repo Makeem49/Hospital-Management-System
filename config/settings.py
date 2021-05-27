@@ -1,10 +1,12 @@
+import os 
 DEBUG = True
 
 SECRET_KEY = "kjhskihfoinehrc"
 
-SQLALCHEMY_DATABASE_URI = ''
-SQLALCHEMY_COMMIT_ON_TEARDOWN = True
-SQLALCHEMY_TRACK_MODIFICATIONS = False
+# db_uri = 'postgresql://makeem49:Olayinka1?@localhost:7000/hms'
+# SQLALCHEMY_DATABASE_URI = db_uri
+# SQLALCHEMY_COMMIT_ON_TEARDOWN = True
+# SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
 # Celery.
@@ -14,6 +16,17 @@ CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_REDIS_MAX_CONNECTIONS = 5
+
+# flask-mail configuration 
+MAIL_SERVER = 'smtp.gmail.com'
+MAIL_PORT = '587'
+MAIL_USE_TLS = True
+MAIL_USE_SSL = False
+MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
+MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
+MAIL_DEFAULT_SENDER = os.environ.get('MAIL_USERNAME')
+FLASKY_MAIL_SUBJECT_PREFIX = 'Dr. Poo clinic'
+FLASKY_MAIL_SENDER = os.environ.get('MAIL_USERNAME')
 
 
 # SQLAlchemy 
