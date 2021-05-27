@@ -18,16 +18,16 @@ services:
 
   redis:
     image: 'redis:3.0-alpine'
-    command: redis-server --requirepass Olayinka1?
+    command: redis-server --requirepass devpassword
     volumes:
       - 'redis:/var/lib/redis/data'
     ports:
-      - '6379:6379'
+      - '6370:6370'
 
 
   celery:
     build: .
-    command: celery worker -l info -A hms.blueprints.contact.tasks
+    command: celery -A hms.blueprints.contact.tasks worker
     env_file:
       - '.env'
     volumes:
