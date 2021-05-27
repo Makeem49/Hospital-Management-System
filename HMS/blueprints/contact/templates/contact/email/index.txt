@@ -1,0 +1,4 @@
+Message sent from {{data.get('name')}} with {{data.get('email')}} ;
+
+{{data.message}}
+
