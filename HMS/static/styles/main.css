@@ -585,8 +585,6 @@ header {
     color: white;
 }
 
-
-
 .copyright {
     width: 100vw;
     height: 80px;
@@ -634,4 +632,89 @@ header {
     font-size: 40px;
 }
 
+.contact_container {
+    width: 100vw;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+}
 
+.contact_img {
+    width: 50%;
+    position: relative;
+    background-image: url('/static/images/contact1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.contact_text {
+    width: 60%;
+    position: relative;
+    background: linear-gradient(to left, #5EB2FE, rgb(121, 121, 230));
+}
+
+
+.map {
+    width: 1200px;
+    height: 500px;
+    margin: 100px auto;
+    background-color: brown;
+}
+
+
+.contact_form {
+    position: relative;
+    width: 1200px;
+    min-height: 600px;
+    margin: 5px auto;
+}
+
+.contact_input {
+    position: relative;
+    width: 1200px;
+    min-height: 600px;
+    position: relative;
+    padding: 0px 50px;
+}
+
+.contact_input h1 {
+    position: relative;
+    font-size: 40px;
+    display: block;
+    color: black;
+    padding-top: 25px;
+    /* padding-left: ; */
+}
+
+.message_input {
+    position: relative;
+    display: block;
+    margin-top: 20px;
+    width: 1100px ;    
+    min-height: 300px;
+    padding: 15px;
+    font-size: 20px;
+}
+
+.name {
+    margin-top: 20px;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;#
+}
+
+#user_name {
+    position: relative;
+    width: 48%;    
+    min-height: 20px;
+    padding: 15px;
+    font-size: 20px;
+}
+
+#subject {
+    position: relative;
+    display: block;
+    width: ;
+}
