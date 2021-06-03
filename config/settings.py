@@ -1,7 +1,7 @@
 import os 
 DEBUG = True
 
-SECRET_KEY = "kjhskihfoinehrc"
+SECRET_KEY = 'fe84032a3161e31057e4d7630ce73f25'
 
 # db_uri = 'postgresql://makeem49:Olayinka1?@localhost:7000/hms'
 # SQLALCHEMY_DATABASE_URI = db_uri
@@ -17,19 +17,14 @@ CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_REDIS_MAX_CONNECTIONS = 5
 
+
 # flask-mail configuration 
 MAIL_SERVER = 'smtp.gmail.com'
 MAIL_PORT = '587'
 MAIL_USE_TLS = True
 MAIL_USE_SSL = False
-MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
+MAIL_USERNAME=os.environ.get('MAIL_USERNAME')
 MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
 MAIL_DEFAULT_SENDER = os.environ.get('MAIL_USERNAME')
 FLASKY_MAIL_SUBJECT_PREFIX = 'Dr. Poo clinic'
 FLASKY_MAIL_SENDER = os.environ.get('MAIL_USERNAME')
-
-
-# SQLAlchemy 
-# db_uri = 'postgresql://makeem49:Olayinka1?@localhost:7000/hms'
-
-# db_uri = 'postgresql://postgres:Olayinka1?@localhost:5432/snakeeyes'

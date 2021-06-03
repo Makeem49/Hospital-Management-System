@@ -8,7 +8,8 @@
 
         </div>
         <div class="contact_text">
-
+            <h1>Contact</h1>
+            <h2>Home/Contact</h2>
         </div>
     </div>
 
@@ -23,19 +24,51 @@
     
                 {{ form.csrf_token }}
 
-                {{form.message(placeholder='Enter your message here.', class='message_input')}}
+                {% if form.message.errors %}
+                    {{form.message(placeholder='Enter your message here.', class='message_input')}}
+                    {% for error in form.message.errors %}
+                        <strong class="below">{{error}}</strong>
+                    {% endfor %}
+                {% else %}
+                    {{form.message(placeholder='Enter your message here.', class='message_input')}}
+                {% endif %}
     
                 <div class="name">
-                    {{form.first_name(id='user_name', placeholder='First Name')}}
-                    {{form.last_name(id='user_name', placeholder='Last Name')}}
+
+                    {% if form.first_name.errors %}
+                        {{form.first_name(id='user_name', placeholder='First Name')}}
+                        {% for error in form.first_name.errors %}
+                            <strong class="below">{{error}}</strong>
+                        {%endfor %}
+                    {% else %}
+                        {{form.first_name(id='user_name', placeholder='First Name')}}
+                    {% endif %}
+
+                    {% if form.last_name.errors %}
+                        {{form.last_name(id='user_name', placeholder='Last Name')}} 
+                        {% for error in form.last_name.errors %}
+                            <strong class="below">{{error}}</strong>
+                        {% endfor %}
+                    {% else %}
+                        {{form.last_name(id='user_name', placeholder='Last Name')}} 
+                    {% endif %}
+
                 </div>
 
+
+                {% if form.subject.errors %}
+                    {{form.subject(id='subject_input', placeholder='Last Name')}} 
+                    {% for error in form.subject.errors %}
+                        <strong class="below">{{error}}</strong>
+                    {% endfor %}
+                {% else %}
+                    {{form.subject(id='subject_input', placeholder='Last Name')}} 
+                {% endif %}
                 
-                {{form.subject(placeholder='Enter subject', id=subject_input)}}
+
+                {{ form.submit(class='submit_button') }}
+    
                 
-    
-                {{form.submit()}}
-    
             </form>
         </div>
         </div>

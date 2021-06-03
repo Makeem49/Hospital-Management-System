@@ -650,9 +650,24 @@ header {
 
 
 .contact_text {
-    width: 60%;
+    width: 50%;
     position: relative;
-    background: linear-gradient(to left, #5EB2FE, rgb(121, 121, 230));
+    background-image: url('/static/images/contact1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: end;
+    padding-top: 50px;
+    padding-right: 100px;
+}
+
+.contact_text h1 {
+    font-size: 50px;
+    padding-bottom: 30px;
+}
+
+.contact_text h2 {
+    font-size: 20px;
 }
 
 
@@ -702,7 +717,7 @@ header {
     margin-top: 20px;
     height: 55px;
     display: flex;
-    justify-content: space-between;#
+    justify-content: space-between;
 }
 
 #user_name {
@@ -713,8 +728,27 @@ header {
     font-size: 20px;
 }
 
-#subject {
+#subject_input {
     position: relative;
     display: block;
-    width: ;
+    min-height: 20px;
+    padding: 15px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+.submit_button {
+    display: inline-block;
+    width: 100px;
+    min-height: 40px;
+    margin: 20px 0px;
+    text-align: center;
+    
+}
+
+.below {
+    width: 50px;
+    color: red;
+    display: inline-block;
 }
