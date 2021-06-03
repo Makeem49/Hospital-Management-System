@@ -1,4 +1,4 @@
-from hms import create_app
+from hms.app import create_app
 
 
 app = create_app()
