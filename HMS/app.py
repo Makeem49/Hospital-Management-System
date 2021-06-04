@@ -3,7 +3,8 @@ from celery import Celery
 
 from hms.blueprints.page import page 
 from hms.blueprints.contact import contact
-from hms.extensions import mail, debugger, csrf, db
+from hms.blueprints.user import user
+from hms.extensions import mail, debugger, csrf, db, csrf
 
 CELERY_TASK_LIST = []
 
@@ -41,6 +42,7 @@ def create_app():
 
     app.register_blueprint(page)
     app.register_blueprint(contact)
+    app.register_blueprint(user)
     extensions(app)
 
     return app
@@ -51,3 +53,4 @@ def extensions(app):
     debugger.init_app(app)
     csrf.init_app(app)
     db.init_app(app)
+    csrf.init_app(app)
