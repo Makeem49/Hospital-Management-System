@@ -1,5 +1,6 @@
+import flask
 from hms.blueprints.contact import contact
-from flask import render_template, redirect, url_for
+from flask import render_template, redirect, url_for, flash 
 from hms.blueprints.contact.forms import ContactForm
 
 
@@ -20,5 +21,6 @@ def index():
         }
         from hms.blueprints.contact.tasks import contact_task
         contact_task(email, subject, 'contact/email/index', data)
+        flash("Message has been successfully delivered, you'll get response soon.", "success")
         return redirect(url_for('page.home'))
     return render_template('contact/contact.html', form=form)
