@@ -2,9 +2,9 @@ from flask import Flask
 from celery import Celery 
 
 from hms.blueprints.page import page 
-from hms.blueprints.contact import contact
 from hms.blueprints.user import user
-from hms.extensions import mail, debugger, csrf, db, csrf
+from hms.blueprints.contact import contact
+from hms.extensions import mail, debugger, csrf
 
 CELERY_TASK_LIST = []
 
@@ -35,14 +35,19 @@ def create_celery_app(app=None):
 
 
 
-def create_app():
+def create_app(settings_override = None):
     app = Flask(__name__, instance_relative_config=True)
 
     app.config.from_object('config.settings')
 
+    app.config.from_pyfile('settings.py', silent=True)
+
+    if settings_override:
+        app.config.update(settings_override)
+
     app.register_blueprint(page)
-    app.register_blueprint(contact)
     app.register_blueprint(user)
+    app.register_blueprint(contact)
     extensions(app)
 
     return app
@@ -51,6 +56,4 @@ def create_app():
 def extensions(app):
     mail.init_app(app)
     debugger.init_app(app)
-    csrf.init_app(app)
-    db.init_app(app)
     csrf.init_app(app)
