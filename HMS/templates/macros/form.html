@@ -1,0 +1,60 @@
+{# This will render the label of the field either by rendering it strong or just normal text #}
+{% macro field_label(field) %}
+    <label class="{{field.id}}">
+        {% if field.flags.required %}
+            <strong>{{field.label.text}}<em>*</em></strong>
+        {% else %}
+            {{ field.label }}
+        {% endif %}
+    </label>
+{% endmacro %}
+
+
+{# This function will render list of error that fail validation #}
+{% macro field_errors(field) %}
+    {% if field.errors %}
+        <div class="list-unstyled text-danger field-error">
+            {% for field in field.errors %}
+                <li>{{ field | e }}</li>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endmacro %}
+
+
+{# This will render the input field for each field #}
+{% macro field_input(field, css_class) %}
+    {{field(class=css_class)}}
+{% endmacro %}
+
+
+{# Checking field type for each field #}
+{% macro field_check(field) %}
+    {{field(type='checkbox', **kwargs)}} {{field.label() }}
+{% endmacro %}
+
+
+{# Rendering each field #}
+{% macro form_group(field, css_class='', focus='') %}
+    {% if field.type == 'BooleanField' %}
+        {{ field_check(field, **kwargs) }}
+    {% else %}
+        {{field_label(field)}}
+        {{field_input(field, css_class)}}
+    {% endif %}
+
+    {{field_errors(field)}}
+    {{ caller() }}
+{% endmacro %}
+
+
+{% macro form_tag(endpoint, css_class='', method='post') %}
+    <form action="{{url_for(endpoint, **kwargs)}}" method="{{method}}" class="{{css_class}}">
+
+            {{form.hidden_tag()}}
+            {{caller()}}
+
+    </form>
+{% endmacro %}
+
+
