@@ -1,0 +1,21 @@
+{% extends "layouts/app.html" %}
+{% import 'macros/form.html' as f with context %}
+
+{% block container %} 
+
+    {% call f.form_tag('contact.index', css_class='form-group') %}
+        <legend id="legend-title">Contact US</legend>
+        {% call f.form_group(form.name, css_class='form-name') %}
+        {% endcall %}
+
+        {% call f.form_group(form.email, css_class='form-email') %}
+        {% endcall %}
+
+        {% call f.form_group(form.message, css_class='form-message') %}
+        {% endcall %}
+
+        <button type="submit" class="submit-button">Send</button>
+
+    {% endcall %}
+
+{% endblock %}
