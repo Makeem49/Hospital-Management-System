@@ -1,30 +1,28 @@
-# Server
 Flask==0.10.1
-gunicorn==20.1.0
 werkzeug==0.14.1
 
+# Application server for both development and production.
+gunicorn==20.1.0
 
-# flask-wtforms
-Flask-WTF==0.14
-WTForms-Components==0.9.7
+# Testing and static analysis.
 
-# SQLAlchemy 
-# psycopg2-binary ==  2.8.6  # I did this because it was requesting for it. 
-psycopg2==2.8.1
-Flask-SQLAlchemy==2.1
-
-# test
 pytest==5.1.0
 pytest-cov==2.7.1
 flake8==3.7.8
 
-# Tasks 
+# CLI.
+Click==6.4
+
+# Data and workers.
+
+# Turns out Celery 4.3.x started to
+# break due to one of its dependencies not being locked. Now we're using 4.4.0.
 redis==3.3.7
 celery==4.4.0
 
-
-# CLI.
-Click==6.4
+# Forms.
+Flask-WTF==0.9.5
+WTForms-Components==0.9.7
 
 # Extensions.
 flask-debugtoolbar==0.10.0
