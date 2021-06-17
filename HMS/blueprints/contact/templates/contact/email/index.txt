@@ -1,4 +1,0 @@
-Message sent from {{data.get('email')}} ;
-
-{{data.message}}
-
