@@ -27,7 +27,7 @@ services:
 
   celery:
     build: .
-    command: celery -A hms.blueprints.contact.tasks worker
+    command: celery worker -l info -A hms.blueprints.contact.tasks
     env_file:
       - '.env'
     volumes:
