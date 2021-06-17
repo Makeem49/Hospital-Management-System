@@ -112,6 +112,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;   
+    background-position-x: right;
 }
 
 .main-content {
@@ -265,7 +266,7 @@ header {
     height: 450px;
     left: 0px;
     top: 0px;
-    background-image: url(/static/images/container2.jpg);
+    background-image: url('/static/images/container2.jpg');
     background-size: cover;
     background-repeat:no-repeat;
 }
@@ -276,7 +277,7 @@ header {
     height: 450px;
     left: 280px;
     top: 150px;
-    background-image: url(/static/images/container1.jpg);
+    background-image: url('/static/images/container1.jpg');
     background-size: cover;
     background-repeat:no-repeat;
 }
@@ -381,8 +382,13 @@ header {
 
 .department_thumb {
     height: 200px;
-    background-color: blue;
+    background-image: url(/static/images/d1.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: blue; */
     border-radius: 20px 20px 0px 0px;
+
 }
 
 .department_thumb img {
@@ -460,7 +466,6 @@ header {
     margin-top: 20px auto;
     display: flex;
     justify-content: space-around;
-
 }
 
 .service-link a {
@@ -670,7 +675,6 @@ header {
     font-size: 20px;
 }
 
-
 .map {
     width: 1200px;
     height: 500px;
@@ -678,77 +682,81 @@ header {
     background-color: brown;
 }
 
-
-.contact_form {
+.form-group {
     position: relative;
-    width: 1200px;
-    min-height: 600px;
-    margin: 5px auto;
+    width: 800px;
+    min-height: 500px;
+    background-color: #e9ebec98;
+    margin: 20px auto 20px auto;
+    border-radius: 30px;
+    color: grey;
 }
 
-.contact_input {
-    position: relative;
-    width: 1200px;
-    min-height: 600px;
-    position: relative;
-    padding: 0px 50px;
+
+#legend-title {
+    font-size: 50px;
+    color: grey;
+    padding-left: 40px;
 }
 
-.contact_input h1 {
-    position: relative;
-    font-size: 40px;
+.form-email {
+    box-sizing: border-box;
     display: block;
-    color: black;
-    padding-top: 25px;
-    /* padding-left: ; */
-}
-
-.message_input {
     position: relative;
-    display: block;
-    margin-top: 20px;
-    width: 1100px ;    
-    min-height: 300px;
-    padding: 15px;
-    font-size: 20px;
+    width: 90%;
+    height: 50px;
+    padding: 20px;
+    font-size: 22px;
+    border-radius: 15px;
+    margin: 0px auto;
 }
 
-.name {
-    margin-top: 20px;
-    height: 55px;
-    display: flex;
-    justify-content: space-between;
-}
-
-#user_name {
-    position: relative;
-    width: 48%;    
-    min-height: 20px;
-    padding: 15px;
-    font-size: 20px;
-}
-
-#subject_input {
+.form-name {
+    box-sizing: border-box;
     position: relative;
     display: block;
-    min-height: 20px;
-    padding: 15px;
-    width: 100%;
-    margin-top: 20px;
+    height: 50px;
+    width: 90%;
+    padding: 20px;
+    font-size: 22px;
+    border-radius: 15px;
+    border-radius: 15px;
+    margin: 0px auto;
 }
 
+.form-message {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    width: 90%;
+    min-height: 250px;
+    font-size: 22px;
+    padding:20px;
+    border-radius: 15px;
+    border-radius: 15px;
+    margin: 0px auto;
+}
 
-.submit_button {
-    display: inline-block;
+.submit-button {
+    position: relative;
     width: 100px;
-    min-height: 40px;
-    margin: 20px 0px;
-    text-align: center;
-    
+    height: 50px;
+    margin: 30px 0px 30px 40px;
+    font-size: 20px;
+    border-radius: 20px;
 }
 
-.below {
-    width: 50px;
-    color: red;
-    display: inline-block;
+.name, .email, .message{
+    position: relative;
+    display: block;
+    font-size: 25px;
+    line-height: 2.0;
+    color: grey;
+    margin-left: 40px;
+}
+
+
+.list-unstyled {
+    padding-left: 40px;
+    list-style: none;
 }
