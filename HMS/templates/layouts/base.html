@@ -53,10 +53,10 @@
     <!-- Categorizing all page content inside a container to allow reuseability -->
     {% block container %}
 
-        {{ flash.render_flash() }}
 
 
         <div class="main">
+            {{ flash.render_flash() }}
             {% block main %}{% endblock %}
         </div>
         
