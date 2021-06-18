@@ -1,37 +1,37 @@
 from flask import Flask
-from celery import Celery 
+# from celery import Celery 
 
 from hms.blueprints.page import page 
 from hms.blueprints.user import user
 from hms.blueprints.contact import contact
 from hms.extensions import mail, debugger, csrf
 
-CELERY_TASK_LIST = []
+# CELERY_TASK_LIST = []
 
-def create_celery_app(app=None):
-    """
-    Create a new Celery object and tie together the Celery config to the app's
-    config. Wrap all tasks in the context of the application.
+# def create_celery_app(app=None):
+#     """
+#     Create a new Celery object and tie together the Celery config to the app's
+#     config. Wrap all tasks in the context of the application.
 
-    :param app: Flask app
-    :return: Celery app
-    """
-    app = app or create_app()
+#     :param app: Flask app
+#     :return: Celery app
+#     """
+#     app = app or create_app()
 
-    celery = Celery(app.import_name, broker=app.config['CELERY_BROKER_URL'],
-                    include=CELERY_TASK_LIST)
-    celery.conf.update(app.config)
-    TaskBase = celery.Task
+#     celery = Celery(app.import_name, broker=app.config['CELERY_BROKER_URL'],
+#                     include=CELERY_TASK_LIST)
+#     celery.conf.update(app.config)
+#     TaskBase = celery.Task
 
-    class ContextTask(TaskBase):
-        abstract = True
+#     class ContextTask(TaskBase):
+#         abstract = True
 
-        def __call__(self, *args, **kwargs):
-            with app.app_context():
-                return TaskBase.__call__(self, *args, **kwargs)
+#         def __call__(self, *args, **kwargs):
+#             with app.app_context():
+#                 return TaskBase.__call__(self, *args, **kwargs)
 
-    celery.Task = ContextTask
-    return celery
+#     celery.Task = ContextTask
+#     return celery
 
 
 
