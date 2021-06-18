@@ -7,11 +7,12 @@ from hms.app import create_app
 def app():
     params = {
         "DEBUG" : False,
-        "TESTING": True
+        "TESTING": True,
+        'WTF_CSRF_ENABLED': False,
     }
 
+    
     _app = create_app(settings_override=params)
-
     ctx = _app.app_context()
 
     ctx.push()
