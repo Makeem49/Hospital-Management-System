@@ -29,3 +29,6 @@ MAIL_PASSWORD = os.environ.get('MAIL_USERNAME')
 MAIL_DEFAULT_SENDER = os.environ.get('MAIL_PASSWORD')
 FLASKY_MAIL_SUBJECT_PREFIX = 'Dr. Poo clinic'
 FLASKY_MAIL_SENDER = os.environ.get('MAIL_USERNAME')
+
+# Setting cookie configuration duration 
+REMEMBER_COOKIE_DURATION = 3
