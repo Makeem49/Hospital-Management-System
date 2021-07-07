@@ -4,7 +4,7 @@ from flask import Flask
 from hms.blueprints.page import page 
 from hms.blueprints.user import user
 from hms.blueprints.contact import contact
-from hms.extensions import mail, debugger, csrf, login_manager
+from hms.extensions import mail, debugger, csrf, login_manager, db
 
 
 login_manager.login_view = 'users.login'
@@ -71,3 +71,4 @@ def extensions(app):
     debugger.init_app(app)
     csrf.init_app(app)
     login_manager.init_app(app)
+    db.init_app(app)
