@@ -1,10 +1,12 @@
 {% extends "layouts/app.html" %}
+{% extends "layouts/forms.html" as f with context %}
 
 
 {% block container %}
 
     <div class="register">
-        
+        {% call f.form_tag() %}
+            {% f.form_group() %}
+        {% endcall %}
     </div>
-
 {% endblock %}
