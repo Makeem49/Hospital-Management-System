@@ -17,3 +17,11 @@ def contact_me(email, subject, template, **kwargs):
     # return thr
 
 
+def send_confirmation_mail(email, subject='Confirmation email', template, **kwargs):
+    app = current_app._get_current_object()
+    admin = current_app.config['MAIL_USERNAME']
+    msg = Message(sender=admin, recipients[email], reply_to=admin, subject=subject)
+    msg.body =  render_template(template + '.txt' , **kwargs)
+    mail.send(msg)
+
+
