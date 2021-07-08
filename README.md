@@ -2,11 +2,13 @@
 ## The following are the functionality this web application  possess
 
 Admin
-    * Signup their account. Then Login (No approval Required).
+
+Markup : * Signup their account. Then Login (No approval Required).
     * Can register/view/approve/reject/delete doctor (approve those doctor who applied for job in their hospital).
     * Can admit/view/approve/reject/discharge patient (discharge patient when treatment is done).
     * Can Generate/Download Invoice pdf (Generate Invoice according to medicine cost, room charge, doctor charge and other charge).
-    * Can view/book/approve Appointment (approve those appointments which is requested by patient).
+    * Can view/book/approve Appointment (approve those appointments which is requested by patient). 
+    
 
 Doctor
     * Apply for job in hospital. Then Login (Approval required by hospital admin, Then only doctor can login).
