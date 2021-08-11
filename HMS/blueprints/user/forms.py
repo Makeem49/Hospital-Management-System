@@ -49,7 +49,7 @@ class UpdatePasswordForm(Form):
     old_password = PasswordField('Old password', validators=[DataRequired(), Length(min=8, max=24)])
     new_password = PasswordField('New password', validators=[DataRequired(), Length(8, 24)])
     confirm_password = PasswordField('Confirm password', validators=[DataRequired(), Length(8, 24)])
-    submit SubmitField('Change passsword')
+    submit = SubmitField('Change passsword')
 
 class UpdateEmailForm(Form):
     password = PasswordField('Password', validators=[DataRequired(), Length(8, 24)])
@@ -64,5 +64,5 @@ class PasswordResetForm(Form):
 class ChangePasswordForm(Form):
     new_password = PasswordField('New password', validators=[DataRequired(), Length(8, 24)])
     confirm_password = PasswordField('Confirm password', validators=[DataRequired(), Length(8, 24)])
-    submit SubmitField('Change passsword')
+    submit = SubmitField('Change passsword')
 

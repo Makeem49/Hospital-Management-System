@@ -34,7 +34,7 @@ class User(UserMixin,db.Model):
 
     # Account status
     active = db.Column(db.Integer, server_default = '1', nullable = False)
-    confirmed = db.Column(db.Bolean, default = False)
+    confirmed = db.Column(db.Boolean(), default = False)
 
 
     def __init__(self, **kwargs):
